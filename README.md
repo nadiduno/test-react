@@ -9,14 +9,14 @@ Implementando os fundamentos do react (Componentes e Propiedades)
 <div align="center">
   <img 
     alt="Projecto do Feed - Redes Sociais"
-    src="ProjectNadiDunoDesenvolvedorFrontEnd.jpg" 
+    src="./github/ProjectNadiDunoDesenvolvedorFrontEnd.jpg" 
     width="50%"
   >
   <br />
 </div>
 
 ![Languages](https://img.shields.io/badge/%3C%2F%3E-languages-lightgrey)<br/>
-[ReactJS](https://reactjs.org/) | [Vite](https://vitejs.dev/)| [Node.js](https://nodejs.org/en/download/) | [NPM](https://www.npmjs.com/)
+[ReactJS](https://reactjs.org/) | [Vite](https://vitejs.dev/) | [Node.js](https://nodejs.org/en/download/) | [NPM](https://www.npmjs.com/)
 
 
 ```bash
@@ -30,4 +30,6 @@ $ npm i
 $ npm run dev
 ```
 By DevRel <💜 /> [Nadi Duno](https://www.rocketseat.com.br/) © 2023
+<br />
+<br />
 Este é meu 🚀 [Diario de estudo](https://devrelnadiduno.blogspot.com/) 
