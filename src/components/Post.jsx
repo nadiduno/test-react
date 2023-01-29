@@ -22,11 +22,16 @@ export function Post(){
         </time>
       </header>
       <div className={styles.content}>
-        <p>Fala galeraaa :hant: </p>
+        <p>Fala galeraaa 👋 </p>
         <p>Acabei de subir um projeto no me github. É um projeto implementando React.</p>
         <p><a href="#">https://github.com/nadiduno?tab=repositories
         </a></p>
-        <p><a href="#">#React #Desenvolvedor #Developoer #FrontEnd</a></p>
+        <p>
+          <a href="#">#React</a>{' '}
+          <a href="#">#Desenvolvedor</a>{' '}
+          <a href="#">#Developoer</a>{' '}
+          <a href="#">#FrontEnd</a>
+        </p>
       </div>
     </article>
   );
