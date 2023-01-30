@@ -6,7 +6,7 @@
 #test-react
 Implementando os fundamentos do react (Componentes e Propiedades)
 <br />
-<div align="center">
+<div>
   <img 
     alt="Projecto do Feed - Redes Sociais"
     src="https://github.com/nadiduno/test-react/blob/main/.github/ProjectNadiDunoDesenvolvedorFrontEnd.jpg" 
