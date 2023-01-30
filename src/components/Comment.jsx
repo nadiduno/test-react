@@ -18,7 +18,7 @@ export function Comment(){
                 title="28 de janeiro às 08:13h"
                 dateTime="2023-01-28 08:13:30"
               >
-                Cerca de ah atrás
+              {' '}Cerca de 1h atrás
               </time>
             </div>
             <button title='Deletar comentário'>
