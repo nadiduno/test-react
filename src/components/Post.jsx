@@ -1,3 +1,4 @@
+import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
@@ -6,14 +7,17 @@ export function Post(){
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img 
-            className={styles.avatar}
-            src="https://avatars.githubusercontent.com/u/6678054?v=4"
-            alt="Foto do comentarista" />
-            <div className={styles.authorInfo}>
-              <strong>Nadi Duno</strong>
-              <span>DevRel | Front-end</span>
-            </div>
+          <Avatar 
+            // src="https://github.com/nadiduno.png"
+            // hasBorder
+            //Posso não enviar as propiedades porque coloque uma Features de ES6 (Defaut Parameters) como argumento que recebem as propiedades
+            //Em caso de não enviar o src coloca um avatar whitout photo por defecto no props.src
+            //Em caso de não enviar o hasBorder coloca ele com true por defecto no props.hasBorder
+          />
+          <div className={styles.authorInfo}>
+            <strong>Nadi Duno</strong>
+            <span>DevRel | Front-end</span>
+          </div>
         </div>
         <time
           title="28 de janeiro às 08:13h"
