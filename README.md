@@ -3,10 +3,11 @@
 [![Linkedin](https://img.shields.io/badge/in-Nadi%20Duno-blue)](https://www.linkedin.com/in/nadiduno/)
 <br />
 <br />
-#test-react
+# test-react
 Implementando os fundamentos do react (Componentes e Propiedades)
 <br />
-##Web
+<br />
+## Web
 <div>
   <img 
     alt="Projecto do Feed - Redes Sociais"
@@ -15,12 +16,12 @@ Implementando os fundamentos do react (Componentes e Propiedades)
   >
   <br />
 </div>
-##Mobile
+## Mobile
 <div>
   <img 
     alt="Projecto do Feed - Redes Sociais"
     src="https://github.com/nadiduno/test-react/blob/main/.github/ProjectNadiDunoDesenvolvedorFrontEnd2.png" 
-    width="30%"
+    width="20%"
   >
   <br />
   <br />
