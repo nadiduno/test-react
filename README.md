@@ -20,7 +20,7 @@ Implementando os fundamentos do react (Componentes e Propiedades)
   <img 
     alt="Projecto do Feed - Redes Sociais"
     src="https://github.com/nadiduno/test-react/blob/main/.github/ProjectNadiDunoDesenvolvedorFrontEnd2.png" 
-    width="100%"
+    width="50%"
   >
   <br />
 </div>
