@@ -3,8 +3,11 @@
 [![Linkedin](https://img.shields.io/badge/in-Nadi%20Duno-blue)](https://www.linkedin.com/in/nadiduno/)
 <br />
 <br />
-# test-react
-Implementando os fundamentos do react (Componentes e Propiedades)
+# Feed | Post
+É uma rede social onde os usuários podem fazer postagem e outros podem comentar essas postagem.
+
+Estou utilizando algumas features de ES6 (ECMAScript), implementação de escopos no CSS com módulos, e sobretudo componentes e propriedades, os quais são as bases fundamentais da programação reactiva.
+
 <br />
 <br />
 ## Web
