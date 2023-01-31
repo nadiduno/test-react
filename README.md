@@ -10,6 +10,7 @@ Estou utilizando algumas features de ES6 (ECMAScript), implementação de escopo
 
 <br />
 <br />
+
 ## Web
 <div>
   <img 
@@ -19,6 +20,7 @@ Estou utilizando algumas features de ES6 (ECMAScript), implementação de escopo
   >
   <br />
 </div>
+
 ## Mobile
 <div>
   <img 
