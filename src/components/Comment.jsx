@@ -13,7 +13,7 @@ export function Comment(){
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authotAndTime}>
-              <strong>Nadi Duno</strong>
+              <strong>Diego Fernandes</strong>
               <time
                 title="28 de janeiro às 08:13h"
                 dateTime="2023-01-28 08:13:30"

@@ -1,44 +1,60 @@
+import { format, formatDistanceToNow } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+import { useState } from 'react'
+
 import { Avatar } from './Avatar'
 import { Comment } from './Comment'
+
 import styles from './Post.module.css'
 
-export function Post(){
+
+export function Post({author,publishedAt,content}){
+  const publishedDateFormat = format(publishedAt,"dd 'de' LLL 'às' HH:mm'h'",{
+    locale: ptBR,
+  });
+  const publishedDateRelativeToNow = formatDistanceToNow(publishedAt,{
+    locale: ptBR,
+    addSuffix: true,
+  });
+  const [comments, setComments]= useState([
+    1,
+    2,
+  ]);
+  function handleCreateNewComment(){
+    event.preventDefault();
+    setComments([...comments, comments.length + 1]);
+  }
   return(
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
           <Avatar 
-            // src="https://github.com/nadiduno.png"
+            src={author.avatarUrl}
             // hasBorder
             //Posso não enviar as propiedades porque coloque uma Features de ES6 (Defaut Parameters) como argumento que recebem as propiedades
-            //Em caso de não enviar o src coloca um avatar whitout photo por defecto no props.src
             //Em caso de não enviar o hasBorder coloca ele com true por defecto no props.hasBorder
           />
           <div className={styles.authorInfo}>
-            <strong>Nadi Duno</strong>
-            <span>DevRel | Front-end</span>
+            <strong>{author.name}</strong>
+            <span>Web Developer | Front-end</span>
           </div>
         </div>
         <time
-          title="28 de janeiro às 08:13h"
-          dateTime="2023-01-28 08:13:30"
-        >
-          Públicado há 1 h
+          title={publishedDateFormat}
+          dateTime={publishedAt.toISOString()}
+        > 
+          {publishedDateRelativeToNow}
         </time>
       </header>
       <div className={styles.content}>
-        <p>Fala galeraaa 👋 </p>
-        <p>Acabei de subir um projeto no me github. É um projeto implementando React.</p>
-        <p><a href="#">https://github.com/nadiduno?tab=repositories
-        </a></p>
-        <p>
-          <a href="#">#React</a>{' '}
-          <a href="#">#Desenvolvedor</a>{' '}
-          <a href="#">#Developoer</a>{' '}
-          <a href="#">#FrontEnd</a>
-        </p>
+        {content.map(line => {
+          if(line.type === 'paragraph')
+            return <p>{line.content}</p>
+          else if(line.type === 'link')
+            return <p><a href={line.content} target="_blank">{line.content}</a></p>
+        })}
       </div>
-      <form className={styles.commentForm}>
+      <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
         <textarea placeholder="Deixe um comentario"/>
         <footer>
@@ -46,9 +62,9 @@ export function Post(){
         </footer>
       </form>
       <div className={styles.commentList}>
-        <Comment />
-        <Comment />
-        <Comment />
+        {comments.map(comment=> {
+          return <Comment />
+        })}       
       </div>
     </article>
   );
