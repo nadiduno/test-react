@@ -17,12 +17,12 @@ export function Post({author,publishedAt,content}){
     addSuffix: true,
   });
   const [comments, setComments]= useState([
-    1,
-    2,
+    'Muito bom, parabéns!!! 👏'
   ]);
   function handleCreateNewComment(){
     event.preventDefault();
-    setComments([...comments, comments.length + 1]);
+    setComments([...comments, event.target.comment.value]);
+    event.target.comment.value = '';
   }
   return(
     <article className={styles.post}>
@@ -56,14 +56,17 @@ export function Post({author,publishedAt,content}){
       </div>
       <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
-        <textarea placeholder="Deixe um comentario"/>
+        <textarea
+          name="comment"
+          placeholder="Escreva aqui um comentario"
+        />
         <footer>
           <button type="submit">Publicar</button>
         </footer>
       </form>
       <div className={styles.commentList}>
         {comments.map(comment=> {
-          return <Comment />
+          return <Comment content={comment} />
         })}       
       </div>
     </article>
