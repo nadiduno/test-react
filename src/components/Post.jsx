@@ -19,14 +19,19 @@ export function Post({author,publishedAt,content}){
   const [comments, setComments]= useState([
     'Muito bom, parabéns!!! 👏'
   ]);
-  const [newCommentText,setNewCommentText]= useState('' )
+  const [newCommentText,setNewCommentText]= useState('' );
+  const isNewCommentEmpty = newCommentText.length === 0;
   function handleCreateNewComment(){
     event.preventDefault();  
     setComments([...comments,newCommentText]);
     setNewCommentText('');  
   }
   function handleNewCommentChange(){
+    event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
+  }
+  function handleNewCommnentInvalid(){
+    event.target.setCustomValidity('Esse campo é obrigatorio!');
   }
   function deleteComment(commentToDelete ){
     const commentWhithOutDeleteOne = comments.filter(comment => {
@@ -71,9 +76,16 @@ export function Post({author,publishedAt,content}){
           placeholder="Escreva aqui um comentario"
           value={newCommentText}
           onChange={handleNewCommentChange}
+          onInvalid={handleNewCommnentInvalid}
+          required
         />
         <footer>
-          <button type="submit">Publicar</button>
+          <button 
+            type="submit"
+            disabled={isNewCommentEmpty}
+          >
+            Publicar
+          </button>
         </footer>
       </form>
       <div className={styles.commentList}>
