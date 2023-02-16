@@ -1,16 +1,23 @@
 import { Trash,ThumbsUp } from 'phosphor-react'
+import { useState } from 'react'
 import { Avatar } from './Avatar'
 import styles from './Comment.module.css'
 
 export function Comment({content, onDeleteComment }){
+  const [likeCount, setLikeCount] = useState(0);
   function handDeleteComment(){
     onDeleteComment(content);
+  }
+  function handleLikeComment(){
+    setLikeCount(likeCount + 1); 
   }
   return(
     <div className={styles.comment}>
       <Avatar 
         // src="https://github.com/nadiduno.png"
         hasBorder={false}
+        //Posso não enviar as propiedades porque coloque uma Features de ES6 (Defaut Parameters) como argumento que recebem as propiedades
+        //Em caso de não enviar o src coloca um avatar predefinido no props.src
       />
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
@@ -31,10 +38,10 @@ export function Comment({content, onDeleteComment }){
           <p>{content}</p>
         </div>
         <footer>
-          <button>
+          <button onClick={handleLikeComment}>
             <ThumbsUp />
-            Aplaudir
-            <span>20</span>
+            Like
+            <span>{likeCount}</span>
           </button>
         </footer>
       </div>
