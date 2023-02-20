@@ -9,9 +9,9 @@ import styles from './Avatar.module.css'
 //A qual consiste em asignar um valor por default ao argumento em caso de não recever nada
 //Em caso de não recever a props.src colocaremos por default um "avatar predefinido" que esta na rota src/assets/avatarcomicsneon.jpg
 //Em caso de não recever a props.hasBorder colocaremos por default "true" 
-//Por isso Avatar({src="src/assets/avatarcomicsneon.jpg", hasBorder=true}){}
+//Por isso Avatar({src="http://github.com/nadiduno.png", hasBorder=true}){}
 
-export function Avatar({src="src/assets/avatarcomicsneon.jpg", hasBorder=true}){
+export function Avatar({src="http://github.com/nadiduno.png", hasBorder=true}){
   return(
     <div>
       <img 

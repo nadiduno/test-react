@@ -16,7 +16,7 @@ export function Comment({content, onDeleteComment }){
   return(
     <div className={styles.comment}>
       <Avatar 
-        // src="https://github.com/nadiduno.png"
+        src="https://github.com/nadiduno.png"
         hasBorder={false}
         //Posso não enviar as propiedades porque coloque uma Features de ES6 (Defaut Parameters) como argumento que recebem as propiedades
         //Em caso de não enviar o src coloca um avatar predefinido no props.src
@@ -27,10 +27,10 @@ export function Comment({content, onDeleteComment }){
             <div className={styles.authotAndTime}>
               <strong>Fulanito</strong>
               <time
-                title="28 de janeiro às 08:13h"
-                dateTime="2023-01-28 08:13:30"
+                title="20 de fevereiro às 03:02h"
+                dateTime="2023-02-20 03:02:30"
               >
-              {' '}Cerca de 1h atrás
+              {/* {' '}Cerca de 1h atrás */}
               </time>
             </div>
             <button onClick={handDeleteComment} title='Deletar comentário'>
